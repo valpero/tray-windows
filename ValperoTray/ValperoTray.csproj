@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <!-- net8.0-windows10.0.17763.0 sets TargetPlatformVersion = 10.0.17763.0 -->
+    <TargetFramework>net8.0-windows10.0.17763.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <!-- WinForms needed for NotifyIcon -->
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- ApplicationIcon: add Resources\valpero.ico to use a custom icon -->
+    <!-- <ApplicationIcon>Resources\valpero.ico</ApplicationIcon> -->
+    <AssemblyName>Valpero</AssemblyName>
+    <RootNamespace>ValperoTray</RootNamespace>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Company>Valpero</Company>
+    <Product>Valpero Tray</Product>
+    <Description>Valpero uptime monitoring — Windows system tray</Description>
+    <Copyright>© 2025 Valpero</Copyright>
+
+    <!-- Disable single-file bundling — reduces AV false positives significantly -->
+    <PublishSingleFile>false</PublishSingleFile>
+    <!-- Framework-dependent: smaller binary, signed by Microsoft runtime -->
+    <SelfContained>false</SelfContained>
+    <!-- Trim unused code for smaller output -->
+    <PublishTrimmed>false</PublishTrimmed>
+
+    <!-- Min supported version matches TargetPlatformVersion above -->
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+  </PropertyGroup>
+
+  <!-- Uncomment and add Resources\valpero.ico to use a custom tray icon -->
+  <!-- <ItemGroup>
+    <Resource Include="Resources\valpero.ico" />
+  </ItemGroup> -->
+</Project>
