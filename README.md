@@ -51,7 +51,7 @@ Right-click the tray icon → **Settings**, paste your Valpero API key and click
 ## Build from Source
 
 ```bash
-git clone https://github.com/CyberScoper/valpero-tray.git
+git clone https://github.com/valpero/valpero-tray.git
 cd valpero-tray/ValperoTray
 
 dotnet publish -c Release -r win-x64 --self-contained false -o publish\
